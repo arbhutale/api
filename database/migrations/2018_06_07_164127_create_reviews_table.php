@@ -15,7 +15,7 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreign('product_id')->refrences('id')->on('products')->onDelete('cascase');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->string('customer');
             $table->text('review');
             $table->integer('star');
